@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="miniproject.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+  </head>
+<body style="background-color: #FFEAA7;">
+    
+  <header>
+    <div class="conatiner" style="background-color:#294B29;"><center><img src="logomain1.jpeg" id="logo"></center></div>
+    <div id="head" class="d-none d-md-block">
+  <ul>
+ <li><a href="miniproject.html" ><i class="bi bi-house"></i>Home</a></li>
+ <li><a href="Aboutus.html" ><i class="bi bi-person"></i>About Us</a></li>
+
+ <li><a href=""><i class="bi bi-credit-card"></i>Transfer</a>
+  <div class="subtransfer">
+<ul><li><a href="international.html">International Transfer</a></li>
+<li><a href="national.html" >National Transfer</a></li>
+</ul></div>
+</li>
+ <li><a href="contact.html" ><i class="bi bi-telephone"></i>Contact Us</a></li>
+ <li><a href="onlinehelp.html" ><i class="bi bi-question-circle"></i>Online Help</a></li>
+    
+    
+ <li><a href="myprofile.html"><i class="bi bi-person-circle"></i>My Profile</a></li>
+</ul></div> <div id="h" class=" d-sm-block d-md-none"><center><i class="bi bi-three-dots-vertical"></i></center></div></header><br>
+ <div class="container mt-5">
+    <div class="row justify-content-center">
+    
+      <div class="col-md-8">
+        <h2 id="loanapplication"><center>Loan Application</center></h2>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4">Loan Application</h2>
+            <form>
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="amount" class="form-label">Loan Amount</label>
+                <input type="number" class="form-control" id="amount" name="amount" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="term" class="form-label">Loan Term (months)</label>
+                <input type="number" class="form-control" id="term" name="term" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="purpose" class="form-label">Loan Purpose</label>
+                <select class="form-select" id="purpose" name="purpose" required>
+                  <option value="" selected disabled>Select Purpose</option>
+                  <option value="personal">Personal</option>
+                  <option value="business">Business</option>
+                  <option value="education">Education</option>
+                </select>
+              </div>
+  
+              <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>  

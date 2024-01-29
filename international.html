@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="miniproject.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ 
+  </head>
+<body style="background-color: #FFEAA7;">
+    
+  <header>
+    <div class="conatiner" style="background-color:#294B29;"><center><img src="logomain1.jpeg" id="logo"></center></div>
+    <div id="head" class="d-none d-md-block">
+  <ul>
+ <li><a href="miniproject.html" ><i class="bi bi-house"></i>Home</a></li>
+ <li><a href="Aboutus.html" ><i class="bi bi-person"></i>About Us</a></li>
+
+ <li><a href=""><i class="bi bi-credit-card"></i>Transfer</a>
+  <div class="subtransfer">
+<ul><li><a href="international.html">International Transfer</a></li>
+<li><a href="national.html" >National Transfer</a></li>
+</ul></div>
+</li>
+ <li><a href="contact.html" ><i class="bi bi-telephone"></i>Contact Us</a></li>
+ <li><a href="onlinehelp.html" ><i class="bi bi-question-circle"></i>Online Help</a></li>
+    
+    
+ <li><a href="myprofile.html"><i class="bi bi-person-circle"></i>My Profile</a></li>
+</ul></div> <div id="h" class=" d-sm-block d-md-none"><center><i class="bi bi-three-dots-vertical"></i></center></div></header>
+ <br>
+ <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card" id="f">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4">International Money Transfer</h2>
+            <form id="transferForm">
+              
+              <div class="mb-3">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="senderName" name="senderName" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="senderAccount" class="form-label">Your Bank Account Number</label>
+                <input type="text" class="form-control" id="senderAccount" name="senderAccount" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="recipientName" class="form-label">Recipient's Name</label>
+                <input type="text" class="form-control" id="recipientName" name="recipientName" required>
+              </div>
+  
+              <div class="mb-3">
+                <label for="recipientAccount" class="form-label">Recipient's Bank Account Number</label>
+                <input type="text" class="form-control" id="recipientAccount" name="recipientAccount" required>
+              </div>
+  
+        
+              <div class="mb-3">
+                <label for="amount" class="form-label">Transfer Amount (USD)</label>
+                <input type="number" class="form-control" id="amount" name="amount" required>
+              </div>
+  
+              <button type="button" class="btn btn-primary w-100" onclick="initiateTransfer()">Initiate Transfer</button>
+            </form>
+  
+            <div id="transferResult" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <script>
+    function initiateTransfer() {
+      
+      const senderName = document.getElementById('senderName').value;
+      const senderAccount = document.getElementById('senderAccount').value;
+      const recipientName = document.getElementById('recipientName').value;
+      const recipientAccount = document.getElementById('recipientAccount').value;
+      const amount = document.getElementById('amount').value;
+  
+     
+      const resultDiv = document.getElementById('transferResult');
+      resultDiv.innerHTML = `<p class="alert alert-success">Transfer initiated successfully! ${amount} USD will be transferred from ${senderName}'s account (${senderAccount}) to ${recipientName}'s account (${recipientAccount}).</p>`;
+    }
+  </script>
+  
